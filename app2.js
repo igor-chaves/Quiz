@@ -1,5 +1,5 @@
 const form = document.querySelector("form")
-const paragraphScore = document.querySelector("p")
+const divScore = document.querySelector(".score")
 const quizAnswers = ["A", "B"]
 
 
@@ -20,6 +20,13 @@ form.addEventListener("submit", e => {
         }
         console.log(`Answer ${index + 1} wrong!`)
     })
-    console.log(score)
-    paragraphScore.textContent = `You got ${score}% on this quiz`
+
+    counter = 0    
+    setInterval(() => {
+        if (counter <= score) {
+            divScore.style.display = "block"
+            divScore.innerHTML = `<p>You got <span class="scoreNumber">${counter}%</span> on this quiz</p>`
+            counter++
+        }
+    }, 10)
 })
