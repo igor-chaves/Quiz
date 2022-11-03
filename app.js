@@ -1,6 +1,6 @@
 const form = document.querySelector("form")
 const finalResult = document.querySelector(".result")
-const correctAnswers = ["B", "B", "B", "B"]
+const correctAnswers = ["B", "B", "B", "A"]
 
 form.addEventListener("submit", e => {
     e.preventDefault()
@@ -19,13 +19,32 @@ form.addEventListener("submit", e => {
         }
     })
 
-    scrollTo(0,100)
+    //retorna a pagina pra cima automaticamente quando o evento submit for ativado
+    scrollTo(0,0)
 
-    finalResult.querySelector("span").textContent =`${score}%`
     finalResult.classList.remove("d-none")
+    
+    let counter = 0
+    // repete a funcao de X em X segundos
+    const timer = setInterval(() => {
+        if (counter === score) {
+            clearInterval(timer)
+        }
+        finalResult.querySelector("span").textContent =`${counter}%`
+        counter++   
+    }, 10)
 })
 
 
+
+
+
+
+
+
+
+
+// funcao que deve ser invoca depois de X segundos
 // write on notebook about this function
 // setTimeout(() => {
 //     alert("2 segundos depois....")

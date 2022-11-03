@@ -2,30 +2,33 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./bootstrap.min.css">
-    <title>Quiz | Japan</title>
+    <link rel="stylesheet" href="style.css">
+    <title>Exercício Quiz</title>
+
 </head>
 <body>
-    <h1>Japan General Knowledge</h1>
+    <div class="head-container">
+        <h1>QUIZ</h1>
+    </div>
+
+    <div class="score">
+        <p>You got ... % right on the quiz</p>
+    </div>
 
     <form>
-        <div>
-            <p class="paragraph">1. capital of japan:</p>
-            <input type="radio" name="question1" value="A"> Tokyo
-            <input type="radio" name="question1" value="B"> Osaka
+        <div class="title-form">
+            <h2>Japan General Knowledge</h2>
         </div>
-        <div>
-            <p>2. capital of brazil:</p>
-            <input type="radio" name="question2" value="A"> Brazilia
-            <input type="radio" name="question2" value="B"> Salvador
+
+        <div class="questions">
+            <div class="question1">
+                <input type="radio" id="question1" value="A" checked>
+                <label for="question1">Tokyo</label>
+                <input type="radio" id="question1" value="B">
+                <label for="question1">Osaka</label>
+            </div>
         </div>
-            <button type="button">Enviar</button>
     </form>
-
-    <h1 class="score"></h1>
-
-    <script src="./app.js"></script>
+    <script src="./app2.js"></script>
 </body>
 </html>
