@@ -12,21 +12,38 @@
     </div>
 
     <div class="score">
-        <p>You got ... % right on the quiz</p>
+        <p></p>
+    </div>
+
+    <div class="title-form">
+        <h2>Japan General Knowledge</h2>
     </div>
 
     <form>
-        <div class="title-form">
-            <h2>Japan General Knowledge</h2>
-        </div>
-
-        <div class="questions">
+        <div class="questions-container">
             <div class="question1">
-                <input type="radio" id="question1" value="A" checked>
-                <label for="question1">Tokyo</label>
-                <input type="radio" id="question1" value="B">
-                <label for="question1">Osaka</label>
+                <p>1. Capital of Japan:</p>
+                <div class="question1-inputs">
+                    <input type="radio" name="question1" value="A">
+                    <label for="question1">Tokyo</label>
+
+                    <input type="radio" name="question1" value="B">
+                    <label for="question1">Osaka</label>
+                </div>
             </div>
+
+            <div class="question2">
+                <p>2. Japan`s currency:</p>
+                <div class="question2-inputs">
+                    <input type="radio" name="question2" value="A">
+                    <label for="question2">Won</label>
+
+                    <input type="radio" name="question2" value="B">
+                    <label for="question2">Yen</label>
+                </div>
+            </div>
+
+            <button>Answer</button>
         </div>
     </form>
     <script src="./app2.js"></script>
