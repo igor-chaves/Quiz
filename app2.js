@@ -1,6 +1,6 @@
 const form = document.querySelector("form")
 const divScore = document.querySelector(".score")
-const quizAnswers = ["A", "B"]
+const quizAnswers = ["A", "B", "A", "B"]
 
 
 form.addEventListener("submit", e => {
@@ -9,6 +9,8 @@ form.addEventListener("submit", e => {
     userAnswers = [
         form.question1.value,
         form.question2.value,
+        form.question3.value,
+        form.question4.value,
     ]
     
     let score = 0
